@@ -1,0 +1,6 @@
+my_service/.vscode/
+my_service/build/
+my_service/CMakeLists.txt
+my_service/Kconfig
+my_service/prj.conf
+my_service/README.md
