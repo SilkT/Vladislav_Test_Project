@@ -7,13 +7,13 @@
 /*
  * Example configuration of a BME280 device on an Arduino I2C bus.
  *
- * Device address 0x77 is assumed. Your device may have a different
+ * Device address 0x76 is assumed. Your device may have a different
  * address; check your device documentation if unsure.
  */
-&arduino_i2c {
+&i2c0 {
 	status = "okay";
-	bme280@77 {
+	bme280@76 {
 		compatible = "bosch,bme280";
-		reg = <0x77>;
+		reg = <0x76>;
 	};
 };

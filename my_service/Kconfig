@@ -1,17 +1,23 @@
-#
-# Copyright (c) 2018 Nordic Semiconductor
-#
-# SPDX-License-Identifier: LicenseRef-BSD-5-Clause-Nordic
-#
+# Copyright (c) 2020, Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
 
-# Sources Kconfig.zephyr in the Zephyr root directory.
-#
-# Note: All 'source' statements work relative to the Zephyr root directory (due
-# to the $srctree environment variable being set to $ZEPHYR_BASE). If you want
-# to 'source' relative to the current Kconfig file instead, use 'rsource' (or a
-# path relative to the Zephyr root).
+config LOG
+	default y
+
+config LOG_PRINTK
+	default y
+
+config SENSOR_LOG_LEVEL
+	default 4
+
+# Enable SPI and I2C support by default so that the sample works with
+# the device connected either way. These defaults can be overridden if
+# needed.
+#config SPI
+#	default y
+
 config I2C
 	default y
-    
-source "$ZEPHYR_BASE/Kconfig.zephyr"
 
+#source "Kconfig.zephyr"
+source "$ZEPHYR_BASE/Kconfig.zephyr"
